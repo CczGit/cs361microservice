@@ -32,7 +32,7 @@ def get_sunrise_sunset():
         sunrise_ts, sunset_ts, _ = calc_sunrise_sunset(start_date.timestamp(), lat, lng)
         # modify to requested format
         sunrise_dt = datetime.fromtimestamp(sunrise_ts, pytz.utc).astimezone(tz).strftime('%I:%M:%S %p')
-        sunset_dt = datetime.fromtiestamp(sunset_ts, pytz.utc).astimezone(tz).strftime('%I:%M:%S %p')
+        sunset_dt = datetime.fromtimestamp(sunset_ts, pytz.utc).astimezone(tz).strftime('%I:%M:%S %p')
         # add to results array
         results.append({
             'date': start_date.strftime(date_format),
